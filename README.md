@@ -37,3 +37,34 @@ Use two pointers (start and end) to compare characters from both ends
 4. Move start forward and end backward
 5. Return false immediately if characters don't match
 6 .Return true if all comparisons pass
+
+⚫**58. Length of Last Word**
+
+**Problem Description**
+
+Given a string s consisting of words and spaces, return the length of the last word in the string.
+
+**Solution Approach**
+
+**The solution follows a two-step process:**
+  1. Trim trailing spaces by iterating from the end of the string and removing spaces until a non-space character is found.
+
+  2. Count characters from the end of the trimmed string until a space is encountered or the beginning is reached.
+
+**Algorithm Complexity**
+
+Time Complexity: O(n) - where n is the length of the string
+
+Space Complexity: O(n) - due to StringBuilder creation
+
+**Example**
+
+Input: s = "Hello World"
+
+**Explanation:** The last word is "World" with length 5.
+
+Input: s = "   fly me   to   the moon  "
+
+Output: 4
+
+   
