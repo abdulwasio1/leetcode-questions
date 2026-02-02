@@ -67,4 +67,28 @@ Input: s = "   fly me   to   the moon  "
 
 Output: 4
 
+
+
+**🔵5. Longest Palindromic Substring**
+
+**Problem:** 
+This solution finds the longest palindromic substring in a given string s.
+
+**Approach**
+Current Implementation: Brute Force
+1. Uses nested loops to generate all possible substrings
+2. For each substring, checks if it's a palindrome using the check() helper method
+3. Tracks and returns the longest palindrome found
+
+**Time Complexity**
+O(n³) where n is the length of the string:
+O(n²) for generating all substrings
+O(n) for checking each substring
+
+**Space Complexity**
+O(1) additional space (excluding the output string)
+
+**Note:**
+This is a basic/naive approach that works but is inefficient for larger inputs. I plan to implement more optimized solutions (like dynamic programming or expand-around-center approaches) in the future to improve performance
+
    
