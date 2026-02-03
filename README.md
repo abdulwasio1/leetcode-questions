@@ -91,4 +91,23 @@ O(1) additional space (excluding the output string)
 **Note:**
 This is a basic/naive approach that works but is inefficient for larger inputs. I plan to implement more optimized solutions (like dynamic programming or expand-around-center approaches) in the future to improve performance
 
+
+**🟢1910. Remove All Occurrences of a Substring**
+
+
+This solution removes all occurrences of a given substring part from string s.
+
+**Approach**
+1. Find and Remove: Uses string::find() to locate the first occurrence of part in s
+2. Iterative Removal: Continues finding and removing occurrences until none remain
+3. In-Place Modification: Modifies the original string directly using erase()
+
+**Complexity**
+Time: O(n²) in worst case where part appears many times (due to repeated string shifting)
+Space: O(1) - modifies the string in-place
+
+**Example**
+Solution sol;
+string result = sol.removeOccurrences("daabcbaabcbc", "abc");
+
    
