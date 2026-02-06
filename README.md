@@ -110,4 +110,39 @@ Space: O(1) - modifies the string in-place
 Solution sol;
 string result = sol.removeOccurrences("daabcbaabcbc", "abc");
 
+
+
+⚪**1929. Concatenation of Array Solution**
+
+
+**Problem Description**
+
+Given an integer array nums of length n, return a new array ans of length 2 * n where ans is the concatenation of two nums arrays.
+
+**Solution Approach**
+
+The solution creates a new vector ans with double the length of the input array, then copies the elements from nums twice to achieve concatenation.
+
+**Key Features**
+
+Time Complexity: O(n) - Single pass through the array
+
+Space Complexity: O(n) - Creates a new array of size 2n
+
+Simple Logic: Uses a single index variable to track position in the original array
+
+**How It Works**
+
+Calculate the size n of the input array
+
+Create result array ans with size 2 * n
+
+Iterate through ans while cycling through nums indices
+
+Reset the index tracker when reaching the midpoint (n)
+
+Copy elements from nums to corresponding positions in ans
+
+
+
    
