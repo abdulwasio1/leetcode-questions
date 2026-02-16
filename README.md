@@ -1,4 +1,4 @@
-🟢**392. Is Subsequence**
+# 🟢**392. Is Subsequence**
 
    **Problem Description**
 
@@ -15,7 +15,7 @@ A subsequence is formed by deleting some (or none) of the characters from the or
 
 
 
-🔵**125. Valid Palindrome**
+ # 🔵**125. Valid Palindrome**
      
   **Problem Description**
 
@@ -38,7 +38,7 @@ Use two pointers (start and end) to compare characters from both ends
 5. Return false immediately if characters don't match
 6 .Return true if all comparisons pass
 
-⚫**58. Length of Last Word**
+# ⚫**58. Length of Last Word**
 
 **Problem Description**
 
@@ -69,7 +69,7 @@ Output: 4
 
 
 
-**🔵5. Longest Palindromic Substring**
+# **🔵5. Longest Palindromic Substring**
 
 **Problem:** 
 This solution finds the longest palindromic substring in a given string s.
@@ -92,8 +92,7 @@ O(1) additional space (excluding the output string)
 This is a basic/naive approach that works but is inefficient for larger inputs. I plan to implement more optimized solutions (like dynamic programming or expand-around-center approaches) in the future to improve performance
 
 
-**🟢1910. Remove All Occurrences of a Substring**
-
+# **🟢1910. Remove All Occurrences of a Substring**
 
 This solution removes all occurrences of a given substring part from string s.
 
@@ -112,7 +111,7 @@ string result = sol.removeOccurrences("daabcbaabcbc", "abc");
 
 
 
-⚪**1929. Concatenation of Array Solution**
+# ⚪**1929. Concatenation of Array Solution**
 
 
 **Problem Description**
@@ -142,6 +141,69 @@ Iterate through ans while cycling through nums indices
 Reset the index tracker when reaching the midpoint (n)
 
 Copy elements from nums to corresponding positions in ans
+
+
+# 📌 4. Median of Two Sorted Arrays
+### 📖 Description
+
+This solution finds the median of two sorted integer arrays by merging them into a single array and then computing the median.
+
+It follows a straightforward approach:
+
+Combine both arrays into one new array.
+
+Sort the merged array.
+
+Return the middle value (or average of two middle values if total length is even).
+
+### ⚙️ How It Works
+**Step 1: Merge Arrays**
+
+A new array nums3 is created with size equal to the sum of both input arrays.
+
+Elements from nums1 and nums2 are copied sequentially into nums3.
+
+**Step 2: Sort**
+
+The merged array is sorted using:
+
+Arrays.sort(nums3);
+
+**Step 3: Find Median**
+
+If total length is odd → return middle element.
+
+If total length is even → return average of two middle elements.
+
+**🧮 Median Logic**
+
+Odd length:
+
+median = nums3[n / 2]
+
+
+**Even length:**
+
+median = (nums3[n/2] + nums3[n/2 - 1]) / 2.0
+
+### ⏱ Time & Space Complexity
+
+Time Complexity:
+O((m + n) log(m + n))
+(due to sorting)
+
+Space Complexity:
+O(m + n)
+(extra array used for merging)
+
+### 🚫 Limitation
+
+Although correct, this is not the optimal solution for the classic
+“Median of Two Sorted Arrays” problem from
+LeetCode,
+which expects a time complexity of O(log(min(m, n))).
+
+This implementation prioritizes simplicity over optimal performance.
 
 
 
